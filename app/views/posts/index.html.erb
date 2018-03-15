@@ -1,0 +1,11 @@
+<h1>Projects</h1>
+<head><title>Task Manager</title></head>
+
+<% @posts.each do |post| %>
+<div class="well">
+    <h3><%= post.title %></h3>
+    <p><%= post.description %></p>
+    <%= link_to "Details", post_path(post),  :class  => 'btn btn-default' %>
+    <%= link_to "Add Task", post_path(post),  :class  => 'btn btn-default' %>
+</div>
+<% end %>
